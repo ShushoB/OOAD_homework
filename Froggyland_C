@@ -1,0 +1,109 @@
+#include <stdio.h>
+
+typedef struct {} Sun_t;
+
+void sun_shining (Sun_t* ptr, int daytime) {
+        if (daytime) {
+            printf ("The Sun is shining \n");
+        } else {
+            printf ("The night has come \n");
+        }
+    }
+    
+
+typedef struct {} Tree_t;
+
+void tree_photosynthesis (Tree_t* ptr, int daytime) {
+        if (daytime) {
+            printf ("The tree produces some fresh air \n");
+        } else {
+            printf ("The tree is waiting for dark times to end \n");
+        }
+    }
+    
+
+typedef struct {} Grass_t;
+
+void grass_grow (Grass_t* ptr, int daytime) {
+        if (daytime) {
+            printf ("The green grass is growing \n");
+        } else {
+            printf ("The grass stopped growing \n");
+        }
+    }
+
+
+typedef struct {} Air_t;
+
+void air_exist (Air_t* ptr, int daytime) {
+    if (daytime) {
+            printf ("There's enough air to breath \n");
+        } else {
+            printf ("No fresh air is being produced \n");
+        }
+    }
+
+typedef struct {} Frog_t;
+
+void frog_sleep (Frog_t* ptr, int daytime) {
+    if (daytime) {
+            printf ("Froggy is awake \n");
+        } else {
+            printf ("Froggy is sleeping \n");
+        }
+    }
+
+void frog_breath (Frog_t* ptr, int daytime) {
+    if (daytime) {
+            printf ("Froggy is breathing \n");
+        }
+    }
+   
+void frog_eat (Frog_t* ptr, int daytime) {
+    if (daytime) {
+            printf ("Froggy is eating fresh grass \n");
+        }
+    }   
+
+void frog_move (Frog_t* ptr, int daytime) {
+    if (daytime) {
+            printf ("Froggy travels across the Froggyland \n");
+        }
+    }   
+
+    
+    int main() {
+        
+    int hour;
+    printf("Enter the hour to see what's going on in the Froggyland: ");
+    scanf("%d", &hour);  
+
+    int daytime;
+    int sunrise = 7;
+    int sunset = 21;
+    if (hour >= sunrise && hour <= sunset) {
+        daytime = 1 ;
+    } else {
+        daytime = 0 ;
+    }
+    
+    Sun_t theSun;
+    sun_shining(&theSun, daytime);
+    
+    Tree_t oak;
+    tree_photosynthesis(&oak, daytime);
+    
+    Grass_t greenGrass;
+    grass_grow(&greenGrass, daytime);
+    
+    Air_t freshAir;
+    air_exist(&freshAir, daytime);
+    
+    Frog_t Froggy;
+    frog_sleep(&Froggy, daytime); 
+    frog_eat(&Froggy, daytime);
+    frog_breath(&Froggy, daytime);
+    frog_move(&Froggy, daytime);
+    
+    return 0;
+    }
