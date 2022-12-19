@@ -5,7 +5,7 @@ class Dog:
         self.gender = gender
         self.age = age
 
-    def dogid(self, name, breed, gender, age):
+    def dog_id(self, name, breed, gender, age):
         print(self.name + "'s breed is: " + self.breed + ", the gender is: " + self.gender + ", and it's " + self.age + " years old")
 
     def dog_run(self):
@@ -21,7 +21,7 @@ class Dog:
         print(self.name + " is eating")
 
 mydog = Dog("Betty", "Labrador Retriever", "female", "2")
-mydog.dogid("Betty", "Labrador Retriever", "female", "2")
+mydog.dog_id("Betty", "Labrador Retriever", "female", "2")
 mydog.dog_bark()
 mydog.dog_eat()
 mydog.dog_run()
