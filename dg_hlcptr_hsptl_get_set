@@ -1,0 +1,164 @@
+class Dog:
+    def __init__(self, name = "Bob", breed = "Bulldog", gender = "male", age = "0" ):
+        self.name = name
+        self.breed = breed
+        self.gender = gender
+        self.age = age
+    def get_name(self):
+        return self.name
+    def set_name(self, name):
+        self.name = name
+    def get_breed(self):
+        return self.breed
+    def set_breed(self, breed):
+        self.breed = breed
+    def get_gender(self):
+        return self.gender
+    def set_gender(self, gender):
+        self.gender = gender
+    def get_age(self):
+        return self.age
+    def set_age(self, age):
+        self.age = age
+    def dogid(self):
+        print(self.name + "'s breed is: " + self.breed + ", the gender is: " + self.gender + ", and it's " + self.age + " years old")
+    def dog_run(self):
+        print(self.name + " is running")
+    def dog_bark(self):
+        print(self.name + " says Wooof!")
+    def dog_sleep(self):
+        print(self.name + " is sleeping")
+    def dog_eat(self):
+        print(self.name + " is eating")
+
+mydog = Dog()
+
+mydog.dogid()
+mydog.dog_bark()
+mydog.dog_eat()
+mydog.dog_run()
+
+mydog.set_name("Betty")
+mydog.set_breed("Retriever")
+mydog.set_gender("female")
+mydog.set_age("3")
+
+mydog.dogid()
+mydog.dog_bark()
+mydog.dog_eat()
+mydog.dog_run()
+
+print()
+
+class Helicopter:
+    def __init__(self, name = "MD", max_height = "30000", max_speed = "200" , national_origin = "China", color = "red"):
+        self.name = name
+        self.max_height = max_height
+        self.max_speed = max_speed
+        self.national_origin = national_origin
+        self.color = color
+    def get_name(self):
+        return self.name
+    def set_name(self, name):
+        self.name = name
+    def get_max_height(self):
+        return self.max_height
+    def set_max_height(self, max_height):
+        self.max_height = max_height
+    def get_max_speed(self):
+        return self.max_speed
+    def set_max_speed(self, max_speed):
+        self.max_speed = max_speed
+    def get_national_origin(self):
+        return self.national_origin
+    def set_national_origin(self, national_origin):
+        self.national_origin = national_origin
+    def get_color(self):
+        return self.color
+    def set_color(self, color):
+        self.color = color
+    def helicopter_id(self):
+        print(self.name + " can raise to the maximum height of " + self.max_height + " meters and gain maximum speed of " + self.max_speed + " km/h. It comes from " + self.national_origin + " it's color is: " + self.color)
+    def helicopter_takeoff(self):
+        print(self.name + " is taking off")
+    def helicopter_landing(self):
+        print(self.name + " is landing")
+
+myhelicopter = Helicopter()
+myhelicopter.helicopter_id()
+myhelicopter.helicopter_takeoff()
+myhelicopter.helicopter_landing()
+
+myhelicopter.set_name("Bell 206")
+myhelicopter.set_max_height("60000")
+myhelicopter.set_max_speed("350")
+myhelicopter.set_national_origin("USA")
+myhelicopter.set_color("camouflage")
+
+myhelicopter.helicopter_id()
+myhelicopter.helicopter_takeoff()
+myhelicopter.helicopter_landing()
+
+print()
+
+class Hospital:
+    def __init__(self, name = "Izmirlyan MC", nb_doctors = "100", nb_nurses = "180", nb_adminitrative_stuff = "90", floors = "6", operating_rooms = "50", hospital_chambers = "400", ambulance_cars = "20"):
+        self.name = name
+        self.nb_doctors = nb_doctors
+        self.nb_nurses = nb_nurses
+        self.nb_adminitrative_stuff = nb_adminitrative_stuff
+        self.floors = floors
+        self.operating_rooms = operating_rooms
+        self.hospital_chambers = hospital_chambers
+        self.ambulance_cars = ambulance_cars
+    def get_name(self):
+        return self.name
+    def set_name(self, name):
+        self.name = name
+    def get_nb_doctor(self):
+        return self.nb_doctors
+    def set_nb_doctors(self, nb_doctors):
+        self.nb_doctors = nb_doctors
+    def get_nb_nurses(self):
+        return self.nb_nurses
+    def set_nb_nurses(self, nb_nurses):
+        self.nb_nurses = nb_nurses
+    def get_nb_adminitrative_stuff(self):
+        return self.nb_adminitrative_stuff
+    def set_nb_adminitrative_stuff(self, nb_adminitrative_stuff):
+        self.nb_adminitrative_stuff = nb_adminitrative_stuff
+    def get_floors(self):
+        return self.floors
+    def set_floors(self, floors):
+        self.floors = floors
+    def get_operating_rooms(self):
+        return self.operating_rooms
+    def set_operating_rooms(self, operating_rooms):
+        self.operating_rooms = operating_rooms
+    def get_hospital_chambers(self):
+        return self.hospital_chambers
+    def set_hospital_chambers(self, hospital_chambers):
+        self.hospital_chambers = hospital_chambers
+    def get_ambulance_cars(self):
+        return self.ambulance_cars
+    def set_ambulance_cars(self, ambulance_cars):
+        self.ambulance_cars = ambulance_cars
+    def hospital_id(self):
+        print(self.name + " hostpital has " + self.nb_doctors + " qualified doctors, " + self.nb_nurses + " nurses and " + self.nb_adminitrative_stuff + " administrative workers. The hospital has " + self.floors + " floors with " + self.operating_rooms + " fully-equipped operating rooms and " + self.hospital_chambers + " chambers in total. The hospital can accept " + self.ambulance_cars + " ambulance brigades at once.")
+    def hospital_emergency(self):
+        print("Attention, an ambulance car is arriving at " + self.name)
+myhospital = Hospital()
+myhospital.hospital_id()
+myhospital.hospital_emergency()
+
+myhospital.set_name("Yerevan Medical Complex")
+myhospital.set_nb_doctors("40")
+myhospital.set_nb_nurses("250")
+myhospital.set_nb_adminitrative_stuff("50")
+myhospital.set_floors("4")
+myhospital.set_operating_rooms("20")
+myhospital.set_hospital_chambers("180")
+myhospital.set_ambulance_cars("15")
+
+myhospital.hospital_id()
+myhospital.hospital_emergency()
