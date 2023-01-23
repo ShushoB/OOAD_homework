@@ -1,0 +1,100 @@
+class User:
+    def __init__(self, name):
+        self.name = name
+        self.wallet = 0
+        self.mycart = Cart()
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def add_to_wallet(self, money):
+        self.wallet += money
+        print("$" +str(money) + " has been added to your card. Your current balance is: $", self.wallet)
+        return self.wallet
+
+    def get_wallet(self):
+        print(self.wallet)
+
+    def purchase(self):
+        total_price = my_cart.count_price()
+        if self.wallet >= total_price:
+            self.wallet -= total_price
+            print("Thank you for your order, the remaining balance is: $" + str(self.wallet))
+        else:
+            print("Payment error, check your balance")
+
+
+
+class Cart:
+    def __init__(self):
+        self.cart = []
+
+    def add_to_cart(self, product):
+        self.cart.append(product)
+
+    def count_price(self):
+        total_price = 0
+        for product in self.cart:
+            product_price = product.get_price()
+            total_price += product_price
+        print("The total price of selected items is: $" + str(total_price))
+        return total_price
+
+    def remove_from_cart(self, product):
+        self.cart.remove(product)
+
+    def print_my_cart(self):
+        if len(self.cart) == 0:
+            print("No items in your shopping cart")
+        else:
+            print("These items were added to your shopping cart: ")
+        for product in self.cart:
+            print(product.name)
+
+    def empty_cart(self):
+        self.cart.clear()
+
+
+
+class Product():
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_price(self):
+        return self.price
+
+    def set_price(self, price):
+        self.price = price
+
+
+
+me = User("Shush")
+me.add_to_wallet(100)
+book = Product("OOAD", 80)
+phone = Product("Iphone", 1000)
+my_cart = Cart()
+my_cart.add_to_cart(book)
+my_cart.add_to_cart(phone)
+my_cart.count_price()
+my_cart.print_my_cart()
+me.purchase()
+
+me.add_to_wallet(1000)
+book = Product("OOAD", 80)
+phone = Product("Iphone", 1000)
+my_cart = Cart()
+my_cart.add_to_cart(book)
+my_cart.add_to_cart(phone)
+my_cart.count_price()
+my_cart.print_my_cart()
+me.purchase()
